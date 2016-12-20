@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-16 12:17:01 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.app.entity.UserEvaluate" table="USER_EVALUATE" dynamic-insert="true" dynamic-update="true">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="evaluate_id" type="java.lang.Integer">
+            <column name="EVALUATE_ID" />
+        </property>
+        <!-- <property name="staff_id" type="java.lang.Integer">
+            <column name="STAFF_ID" />
+        </property> -->
+        <property name="evaluateUserPhone" type="java.lang.String">
+            <column name="EVALUATEUSERPHONE" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="DATE"  />
+        </property>
+        <property name="isReturn" type="char">
+            <column name="ISRETURN"  />
+        </property>
+        <property name="isValid" type="char">
+            <column name="ISVALID"  />
+        </property>
+        <property name="satisfaction" type="java.lang.String">
+            <column name="SATISFACTION" />
+        </property>
+        <property name="subindex_ids" type="java.lang.String">
+            <column name="SUBINDEX_IDS" />
+        </property>
+        
+        <many-to-one name="staff" class="com.app.entity.Staff"  column="staff_id" />
+    </class>
+</hibernate-mapping>

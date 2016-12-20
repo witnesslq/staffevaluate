@@ -1,0 +1,164 @@
+﻿body {
+    background-color: #eae5e5;
+
+}
+
+.header {
+    height: 115px;
+    width:1024px;
+    background-image: url(../images/topbg.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+    
+    font-weight: bold;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 1%;
+    width: 5%;
+}
+
+.logo-title {
+    display: inline-block;
+    margin-left: 7%;
+    font-size: 1.8em;
+    font-family:'微软雅黑';
+    font-weight: bold;
+    line-height: 70px;
+}
+
+.loginout, .loginout:hover, .loginout:visited {
+    color: white;
+    text-decoration: none;
+}
+
+
+.mymsg, .mymsg:hover, .mymsg:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.caret {
+    margin-top: 13px !important;
+}
+
+
+.inline {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.nav {
+    background-image: url(../images/navbg.png);
+    margin: 0;
+    padding-left: 16%;
+    border-bottom: 1px solid #d3d1d1;
+}
+
+.breadcrumb {
+    margin: 0;
+    background-color: none !important;
+}
+
+.date {
+    display: inline-block;
+}
+
+.content {
+	width:1024px;
+	background-color: #024B44;
+    margin-top: 0;
+    padding: 10px;
+	margin-right:0;
+}
+
+.content-left, .content-right {
+    
+    background-color: #024B44;
+    
+}
+
+.content-right {
+    margin-left: 0.1% !important;
+	padding-left:100px;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+	margin-left:20px;
+}
+
+.left-icon {
+    width: 12%;
+}
+
+.left-icon-child {
+    margin-left: 15%;
+    width: 10%;
+}
+
+.left-title {
+    margin-left: 10px;
+    font-weight: bold;
+	color:#ffffff
+}
+
+
+
+
+.accordion-toggle {
+   background-image: url(../images/u10.png);
+   height:61px;
+   margin-top:50px;
+   padding-top:23px;
+   padding-left:40px;
+   background-repeat:no-repeat;
+	
+}
+
+    .accordion-toggle:hover {
+        background-image: url(../images/u12.png);
+        text-decoration: none;
+        color: white !important;
+		
+    }
+
+.accordion-inner:hover {
+    background-image: url(../images/left-title-bg-h.png);
+    text-decoration: none;
+    color: white !important;
+    cursor: pointer;
+}
+
+.content {
+    margin;
+	
+}
+.foot{
+height: 81px;
+    background-image: url(../images/bottombg.png);
+	background-repeat:no-repeat;
+	background-size:cover;
+    
+    font-weight: bold;
+    position: relative;
+}
+.caidanA:hover{
+text-decoration: none;
+}
+.caidanA:link{
+
+text-decoration: none;
+}
+.caidanA:visited{
+
+text-decoration: none;
+}
+.caidanA:active{
+text-decoration: none;
+}

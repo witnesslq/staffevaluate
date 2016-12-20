@@ -1,0 +1,106 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.entity.BusinessHall;
+import com.app.entity.BusinessHall;
+
+/**
+ * 
+ * @author 邢昭武
+ *
+ *         营业厅Dao
+ */
+public interface BusinessHallDao {
+
+	/**
+	 * 添加营业厅
+	 * 
+	 * @param businessHall
+	 * @return 0添加失败，>0添加成功
+	 */
+	public Integer save(BusinessHall businessHall); // 添加营业厅信息
+
+	/**
+	 * 查询所有营业厅信息
+	 * 
+	 * @return 营业厅信息列表
+	 */
+	public List<BusinessHall> findAllBusinessHall();
+
+	/**
+	 * 分页查询所有营业厅信息
+	 * 
+	 * @param pageNo
+	 *            当前页是第几页
+	 * @param pageSize
+	 *            页面大小
+	 * @return 营业厅信息列表
+	 */
+	List findAllByPage(int pageNo, int pageSize, int unitid);
+
+	/**
+	 * 
+	 * @param pageNo
+	 *            当前第几页
+	 * @param pageSize
+	 *            页面大小
+	 * @param unitid
+	 *            管理单位id
+	 * @param no
+	 *            营业厅编号
+	 * @param name
+	 *            营业厅名称
+	 * @return 营业厅信息列表
+	 */
+	List findAllByPage(int pageNo, int pageSize, int unitid, String no, String name);
+
+	/**
+	 * 修改营业厅信息
+	 * @param bh 营业厅实体
+	 * @return int >0修改成功 否则修改失败
+	 */
+	void update(BusinessHall bh);
+	
+	/**
+	 * 删除营业厅信息
+	 * @param ids 营业厅id的组合（1，2，3）
+	 * @return int >0修改成功 否则修改失败
+	 */
+	void deleteByIds(String ids);
+	
+	/**
+	 * 查询指定的营业厅信息
+	 * @param id 营业厅id
+	 * @return 营业厅实体
+	 */
+	BusinessHall selectById(int id);
+	
+	/**
+	 * 查询营业厅总数
+	 * 
+	 * @return int 营业厅总数
+	 */
+	Integer getBusinessHallCount(int unitid, String no, String name);
+	
+	/**
+	 * 查询符合条件的营业厅总数
+	 * @param unitid
+	 *            管理单位id
+	 * @param no
+	 *            营业厅编号
+	 * @param name
+	 *            营业厅名称
+	 * @param unitid
+	 * 			   单位编号
+	 * @return int 符合条件的营业厅总数
+	 */
+	Integer getBusinessHallCount(int unitid);
+
+	/**
+	 * 获取最新的营业厅编号
+	 * 
+	 * @return String 营业厅编号
+	 */
+	String getNewBusinessHallId();
+}

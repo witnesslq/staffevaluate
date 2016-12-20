@@ -1,0 +1,26 @@
+package com.app.dao;
+
+import java.util.List;
+
+import com.app.entity.Unit;
+import com.app.entity.Xtjs;
+/**
+ * 
+ * @author 邢昭武
+ *
+ * 营业厅单位Dao
+ */
+public interface UnitDao {
+	/**
+	 * 查询所有单位信息
+	 * @return List<Unit>
+	 */
+	public List<Unit> findAllUnit();
+	
+	/**
+	 * 添加单位
+	 * @param unit
+	 * @return 0添加失败，>0添加成功
+	 */
+	public Integer save(Unit unit); //添加单位信息
+}

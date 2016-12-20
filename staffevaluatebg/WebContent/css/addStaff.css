@@ -1,0 +1,30 @@
+*{
+	font-size:15px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    text-align: center;
+}
+.backsize{
+		background-color:rgb(234,238,240);
+		margin-left:0px;
+		margin-top:0px;
+		height:400px;
+		width:500px;
+		border:solid 1px gray;
+}
+table{
+	margin:auto;
+}
+input[type="image"] {
+    width: 110px;
+}
+.title {
+    /* border: 1px solid blue; */
+    width: 140px;
+    height: 25px;
+    background-image: url(../images/u137.png);
+    background-repeat: no-repeat;
+}
+.function {
+    margin-top: -60px;
+    margin-left: -650px;
+}

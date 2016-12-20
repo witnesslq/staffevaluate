@@ -1,0 +1,38 @@
+.section1{
+	
+	height: 80px;
+	background-image: url(../images/u16.png);
+	background-repeat: no-repeat;
+	background-size: 640px ;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.section1 span{
+	padding-left: 20px;
+	font-family:'微软雅黑';
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.section2{
+	position: absolute;
+	padding: 10px;
+	background-color: #C7C7C7;
+	height:405px;
+	width:620px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	
+}
+.section2 span{
+	text-indent: 80px;
+	margin-top: 15px;
+	padding-bottom:15px;
+	font-family:'微软雅黑', '宋体';
+  	font-style:normal;
+  	font-size:30px;
+  	text-align:left;
+  	line-height:normal;
+  	overflow-x:hidden;
+	overflow-y:scroll;
+}

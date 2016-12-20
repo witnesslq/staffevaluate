@@ -1,0 +1,59 @@
+*{
+
+    font-size:12px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    background-repeat: no-repeat;
+}
+.titlew{
+	font-size: 15px;
+	position: absolute;
+	margin-left: 15px;
+    margin-top: 5px;
+}
+.back{
+	background-color:rgb(234,238,240);
+	width:760px;
+	height:530px;
+	margin-top:0px;
+	margin-left:0px;
+	border:solid 1px gray;
+}
+.title{
+	width:140px;
+	height: 25px;
+	background-image: url(../images/u137.png);
+	background-repeat: no-repeat;
+}
+textarea {
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 700px;
+    height: 380px;
+    font-size:20px;
+}
+.tishi{
+    margin-top: 15px;
+    margin-left: 30px;
+	font-size: 20px;
+}
+.baocun{
+	float:left;
+}
+.back1{
+	float:left;
+	    margin-left: 22px;
+}
+.s1{
+	margin-left: 500px;
+    margin-top: 10px;
+}
+img {
+    width: 110px;
+}
+.font {
+    margin-top: 11px;
+    margin-left: 32px;
+}
+.content {
+    margin-top: -35px;
+}

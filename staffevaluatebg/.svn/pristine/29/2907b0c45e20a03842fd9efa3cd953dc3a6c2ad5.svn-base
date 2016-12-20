@@ -1,0 +1,66 @@
+package com.app.action;
+
+import java.util.List;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.app.entity.Unit;
+import com.app.service.UnitService;
+import com.app.util.JsonFilter;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
+/**
+ * 
+ * @author 邢昭武
+ * 
+ * 角色action
+ *
+ */
+public class UnitAction extends SuperAction {
+	private Unit unit;
+	private UnitService unitService;
+
+	public Unit getUnit() {
+		return unit;
+	}
+
+	public void setUnit(Unit unit) {
+		this.unit = unit;
+	}
+
+	public UnitService getUnitService() {
+		return unitService;
+	}
+
+	public void setUnitService(UnitService unitService) {
+		this.unitService = unitService;
+	}
+	/**
+	 * 添加角色
+	 * @return
+	 * @throws Exception
+	 */
+	public String add() throws Exception {
+		if (unitService.save(unit)) {
+			return "add";
+		}
+		return "error";
+	}
+	
+	public String getAjax() throws Exception {
+		List<Unit> listAll = unitService.findAllUnit();
+		System.out.println(listAll.toString());
+		JSONArray json=JSONArray.fromObject(listAll);
+		ServletActionContext.getResponse().setContentType("text/html");
+		ServletActionContext.getResponse().setCharacterEncoding("utf-8");
+		ServletActionContext.getResponse().getWriter().printf(json.toString());
+		ServletActionContext.getResponse().getWriter().flush();
+		ServletActionContext.getResponse().getWriter().close();
+		return null;
+	}
+	public String getAll() throws Exception {
+		List<Unit> listAll = unitService.findAllUnit();
+		return "getAll";
+	}
+}

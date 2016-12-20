@@ -1,0 +1,118 @@
+package com.app.action;
+
+import java.io.File;
+import java.util.List;
+import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.struts2.ServletActionContext;
+
+import com.app.entity.BusinessHall;
+import com.app.entity.Unit;
+import com.app.service.BusinessHallService;
+import com.app.service.UnitService;
+import com.app.util.JsonFilter;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JsonConfig;
+import net.sf.json.util.PropertyFilter;
+/**
+ * 
+ * @author 邢昭武
+ * 
+ * 营业厅action
+ *
+ */
+public class BusinessHallAction extends SuperAction {
+	private BusinessHall businessHall;
+	private BusinessHallService businessHallService;
+	private UnitService unitService;
+	public UnitService getUnitService() {
+		return unitService;
+	}
+
+	public void setUnitService(UnitService unitService) {
+		this.unitService = unitService;
+	}
+
+	public BusinessHall getBusinessHall() {
+		return businessHall;
+	}
+
+	public void setBusinessHall(BusinessHall businessHall) {
+		this.businessHall = businessHall;
+	}
+
+	public BusinessHallService getBusinessHallService() {
+		return businessHallService;
+	}
+
+	public void setBusinessHallService(BusinessHallService businessHallService) {
+		this.businessHallService = businessHallService;
+	}
+	/**
+	 * 添加营业厅
+	 * @return
+	 * @throws Exception
+	 */
+	public String add() throws Exception {
+		if (businessHallService.save(businessHall)) {
+			return "add";
+		}
+		return "error";
+	}
+	
+	/**
+	 * 分页获取所有营业厅
+	 * 
+	 * @return
+	 */
+	public String listP() {
+
+		int businessHallCount = 0;
+		try {
+			businessHallCount = businessHallService.getBusinessHallCount();
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		if (businessHallCount < 1) {
+		}
+		int pageCount = businessHallService.getPageCount(businessHallCount, businessHallService.BusinessHall_PAGE_SIZE);
+		System.out.println("营业厅总页数"+pageCount);
+		int pageNo;
+		if (request.getParameter("pageNo") == null || request.getParameter("pageNo").trim().equals("")) {
+			pageNo = 1;
+		}
+		int unitid;
+		if (request.getParameter("unitid") == null || request.getParameter("unitid").trim().equals("")) {
+			unitid = 1;
+		}
+		try {
+			pageNo = Integer.parseInt(request.getParameter("pageNo").trim());
+			unitid = Integer.parseInt(request.getParameter("unitid").trim());
+		} catch (Exception e) {
+			pageNo = 1;
+			unitid=1;
+		}
+		if (pageNo > pageCount) {
+			pageNo = pageCount;
+		}
+		request.setAttribute("pageCount", pageCount);
+		request.setAttribute("currentPage", pageNo);
+		try {
+			List<BusinessHall> listAll =  businessHallService.findAllByPage(pageNo,unitid);
+			for(BusinessHall bh : listAll){
+				System.out.println(bh.getName());
+			}
+		request.setAttribute("listAll", listAll);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return "error";
+		}
+		List<Unit> listUnit = unitService.findAllUnit();
+		request.setAttribute("listUnit", listUnit);
+	
+		return "listP";
+	}
+}

@@ -1,0 +1,15 @@
+package com.app.service;
+
+import java.util.List;
+
+import com.app.entity.Unit;
+/**
+ * 
+ * @author 邢昭武
+ *
+ * 单位Sercice
+ */
+public interface UnitService {
+	public List<Unit> findAllUnit();
+	public boolean save(Unit unit); //添加单位信息
+}

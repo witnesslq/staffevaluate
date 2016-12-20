@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title></title>
+   <link rel="stylesheet" type="text/css" href="../styles/1.css">
+    <style type="text/css">
+  	 	.section2{
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				-khtml-user-select: none;
+				user-select: none;
+  	 	}
+  	 </style>
+  	    <style type="text/css">
+
+body{FONT-SIZE:12pt;font-family: "微软雅黑"}
+
+th{FONT-SIZE:12pt;font-family:"微软雅黑"}
+
+td{FONT-SIZE:12pt;font-family:"微软雅黑"}
+
+</style>
+</head>
+<body>
+<div class="section">
+		<div class="section1">
+			<span>系统介绍</span>
+		</div>
+		<div class="section2">
+			<p>
+国网晋城供电分公司-高平县公司服务品质评价系统。您可以选择对应的服务人员，通过对具体服务人员的服务过程、服务质量进行服务品质评价。
+			</p>
+			<p>
+通过您的评价意见，我们逐步提高我们服务的质量，为您提供更加优质的服务。
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>

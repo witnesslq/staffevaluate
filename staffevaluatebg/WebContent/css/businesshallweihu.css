@@ -1,0 +1,41 @@
+*{
+	font-size:15px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    text-align: center;
+}
+.left{
+	float:left;
+	margin-left: 50px;
+	height:500px;
+	width:300px;
+}
+.right{
+	float:left;
+	height:450px;
+	width:350px;
+}
+.backsize{
+		background-color:rgb(234,238,240);
+		margin-left:0px;
+		margin-top:0px;
+		height:300px;
+		width:700px;
+		border:solid 1px gray;
+}
+table{
+	border-collapse:separate; 
+	border-spacing:0px 15px;
+}
+.title {
+    /* border: 1px solid blue; */
+    width: 140px;
+    height: 25px;
+    background-image: url(../images/u137.png);
+    background-repeat: no-repeat;
+}
+input[type="image"] {
+    width: 110px;
+}
+.function {
+    margin-top: 20px;
+}

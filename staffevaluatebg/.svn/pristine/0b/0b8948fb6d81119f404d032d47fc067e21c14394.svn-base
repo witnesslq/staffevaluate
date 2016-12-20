@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定Struts2配置文件的DTD信息 -->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<!-- Struts2配置文件的根元素 -->
+<struts>
+	<!-- 配置了系列常量 -->
+	<constant name="struts.action.excludePattern" value="/static/.*?" />
+	<constant name="struts.custom.i18n.resources" value="resource"/>
+	<constant name="struts.i18n.encoding" value="utf-8"/>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<package name="wu" extends="struts-default">
+		
+		<action name="staff_*" class="staffAction" method="{1}">
+			<result name="loginform">/login.jsp</result>
+			<result name="get" >/WEB-INF/content/page/staff/staffInfo.jsp</result>
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="loginError">/login.jsp</result>
+			<result name="list">/Views/staffList.jsp</result>
+			<result name="listP">/Views/staffList.jsp</result>
+			<result name="login">/Views/index2.jsp</result>
+			<result name="getOne">/Views/evaluate1.jsp</result>
+			<result name="getNamePic">/Views/index31.jsp</result>
+			<result name="getRolesAndPosts">/Views/page/addStaff.jsp</result>
+			<interceptor-ref name="fileUpload">
+						<param name="allowedTypes">image/bmp,image/x-png,image/gif,image/jpeg</param>
+						<param name="maximumSize">10M</param>
+					</interceptor-ref>
+					<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="userevaluate_*" class="userEvaluateAction" method="{1}">
+			<result name="add" >/Views/index5.jsp</result>
+			<result name="error">/error.jsp</result>
+			<result name="list">/Views/page/userevaluatelist.jsp</result>
+		</action>
+		<action name="uploadzcfg_*" class="uploadZCFGAction"  method="{1}">
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/Views/page/error.jsp</result>
+			<result name="show">/Views/zcfg.jsp</result>
+		</action>
+		<action name="uploadxtjs_*" class="uploadXTJSAction"  method="{1}">
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/Views/page/error.jsp</result>
+			<result name="show">/Views/xtjs.jsp</result>
+		</action>
+		
+		<action name="role_*" class="roleAction"  method="{1}">
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/Views/page/error.jsp</result>
+			<result name="show">/Views/roleList.jsp</result>
+		</action>
+		<action name="post_*" class="postAction"  method="{1}">
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/Views/page/error.jsp</result>
+			<result name="show">/Views/postList.jsp</result>
+		</action>
+		
+		<action name="subindex_*" class="subindexAction"  method="{1}">
+			<result name="add">/Views/page/success.jsp</result>
+			<result name="error">/Views/page/error.jsp</result>
+			<result name="show">/Views/postList.jsp</result>
+		</action>
+		
+		
+		<action name="unit_*" class="unitAction"  method="{1}">
+			<result name="add">/page/success.jsp</result>
+			<result name="error">/page/error.jsp</result>
+			<result name="show">/page/unitList.jsp</result>
+			<result name="getAjax">/page/unitList.jsp</result>
+		</action>
+		<action name="businessHall_*" class="businessHallAction"  method="{1}">
+			<result name="add">/page/success.jsp</result>
+			<result name="error">/page/error.jsp</result>
+			<result name="show">/page/findbusinesshall.jsp</result>
+			<result name="listP">/page/findbusinesshall.jsp</result>
+			
+		</action>
+		
+		<action name="*">
+			<result>/Views/{1}.jsp</result>
+		</action>	
+	</package> 
+	<package name="yu" extends="struts-default">
+	</package> 
+</struts>

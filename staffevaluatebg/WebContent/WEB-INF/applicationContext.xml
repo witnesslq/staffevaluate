@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 指定Spring配置文件的Schema信息 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<!-- 事务的配置 -->
+    <!-- sessionFactory 为自己配置 sessionFactory 的 bean-->
+
+    <bean id="txManager"
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <aop:config>
+
+         <!-- execution(public * *.*.*..*.*(..)) 为自己项目中操作数据库中的方法 -->
+
+        <aop:pointcut id="daoPointcut" expression="within(com.app.dao..*)" />
+
+        <aop:advisor pointcut-ref="daoPointcut"
+
+            advice-ref="txAdvice" />
+
+    </aop:config>
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+             <!-- name 为 方法名 -->
+            <tx:method name="find*" read-only="true" />
+            <tx:method name="get*" read-only="true"/>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+	<!-- <bean id="loggerBean" class="com.app.log.LoggerBean">
+	</bean>
+	<aop:config proxy-target-class="true">
+		<aop:pointcut expression="within(com.app.action.*)" id="actionPointcut"/>
+		<aop:aspect id="loggerAspect" ref="loggerBean" >
+		
+			<aop:before method="logger" pointcut-ref="actionPointcut"/>
+			<aop:after-returning method="logger1" pointcut-ref="actionPointcut"/>
+			
+			<aop:after-throwing method="afterThrowing"  throwing="e" pointcut-ref="actionPointcut"/>
+		</aop:aspect>
+	</aop:config> 
+ -->
+	<bean id="staffDao" class="com.app.dao.impl.StaffDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="staffService" class="com.app.service.impl.StaffServiceImpl">
+		<property name="staffDao" ref="staffDao"/>
+	</bean>
+	<bean id="subindexDao" class="com.app.dao.impl.SubindexDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	<bean id="subindexService" class="com.app.service.impl.SubindexServiceImpl">
+		<property name="subindexDao" ref="subindexDao"/>
+	</bean>
+	<bean id="subindexAction" class="com.app.action.SubindexAction">
+		<property name="subindexService" ref="subindexService"></property>
+	</bean>
+	
+	<bean id="staffAction" class="com.app.action.StaffAction" scope="prototype">
+		<property name="staffService" ref="staffService" />
+		<property name="postService" ref="postService" />
+		<property name="roleService" ref="roleService" />
+		<property name="subindexService" ref="subindexService" />
+		<property name="businessHallService" ref="businessHallService"/>
+	</bean>
+	<bean id="userEvaluateDao"  class="com.app.dao.impl.UserEvaluateDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property> 
+	</bean>
+	<bean id="userEvaluateService" class="com.app.service.impl.UserEvaluateServiceImpl">
+		<property name="userEvaluateDao" ref="userEvaluateDao"></property>
+	</bean>
+		
+	<bean id="userEvaluateAction"   class="com.app.action.UserEvaluateAction">
+		<property name="userEvaluateService" ref="userEvaluateService"></property>
+		<property name="staffService" ref="staffService"></property>
+		<property name="subindexService" ref="subindexService" />
+	</bean>
+	<bean id="zcfgDao" class="com.app.dao.impl.ZcfgDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="zcfgService" class="com.app.service.impl.ZcfgServiceImpl">
+		<property name="zcfgDao" ref="zcfgDao"></property>
+	</bean>
+	
+	<bean id="uploadZCFGAction" class="com.app.action.UploadZCFGAction">
+		<property name="zcfgService" ref="zcfgService"></property>
+	</bean>
+	
+	
+	<bean id="xtjsDao" class="com.app.dao.impl.XtjsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="xtjsService" class="com.app.service.impl.XtjsServiceImpl">
+		<property name="xtjsDao" ref="xtjsDao"></property>
+	</bean>
+	
+	<bean id="uploadXTJSAction" class="com.app.action.UploadXTJSAction">
+		<property name="xtjsService" ref="xtjsService"></property>
+	</bean>
+	
+	
+	<bean id="postDao" class="com.app.dao.impl.PostDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="postService" class="com.app.service.impl.PostServiceImpl">
+		<property name="postDao" ref="postDao"></property>
+	</bean>
+	<bean id="postAction" class="com.app.action.PostAction">
+		<property name="postService" ref="postService"></property>
+	</bean>
+	
+	<bean id="roleDao" class="com.app.dao.impl.RoleDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="roleService" class="com.app.service.impl.RoleServiceImpl">
+		<property name="roleDao" ref="roleDao"></property>
+	</bean>
+	<bean id="roleAction" class="com.app.action.RoleAction">
+		<property name="roleService" ref="roleService"></property>
+	</bean>
+	
+	
+	<bean id="unitDao" class="com.app.dao.impl.UnitDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="unitService" class="com.app.service.impl.UnitServiceImpl">
+		<property name="unitDao" ref="unitDao"></property>
+	</bean>
+	<bean id="unitAction" class="com.app.action.UnitAction">
+		<property name="unitService" ref="unitService"></property>
+	</bean>
+	
+	<bean id="businessHallDao" class="com.app.dao.impl.BusinessHallDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="businessHallService" class="com.app.service.impl.BusinessHallServiceImpl">
+		<property name="businessHallDao" ref="businessHallDao"></property>
+	</bean>
+	<bean id="businessHallAction" class="com.app.action.BusinessHallAction">
+		<property name="businessHallService" ref="businessHallService"></property>
+		<property name="unitService" ref="unitService"></property>
+	</bean>
+	
+
+	
+<!-- 	<bean id="czznDao" class="com.app.dao.impl.CzznDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="czznService" class="com.app.service.impl.CzznServiceImpl">
+		<property name="czznDao" ref="czznDao"></property>
+	</bean>
+	
+	<bean id="uploadCZZNAction" class="com.app.action.UploadCZZNAction">
+		<property name="czznService" ref="czznService"></property>
+	</bean> -->
+</beans>

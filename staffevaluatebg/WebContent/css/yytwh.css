@@ -1,0 +1,19 @@
+
+/*按钮大小*/
+.submit,.reset
+{
+	border-style: none;
+	width: 50px;
+	height: 34px;
+}
+.saveico
+{
+	background-image:url(../images/05.png);
+	background-size: cover;
+}
+.cancelico
+{
+	background-image:url(../images/06.png);
+	background-size: cover;
+}
+

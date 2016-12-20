@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.main {
+	position: absolute;
+	background-image: url(../images/main3.png);
+	background-size: cover;
+	width: 1360px;
+	height: 900px;
+	
+	top: 10;
+}
+
+img {
+	cursor: pointer;
+}
+.homeBody {
+	margin-top: 285px;
+	margin-left: 70px;
+	margin-right: 30px;
+}
+
+.xtjj {
+	text-indent: 80px;
+	margin-top: 15px;
+	padding-bottom: 15px;
+	font-family: '微软雅黑', '宋体';
+	font-style: normal;
+	font-size: 30px;
+	text-align: left;
+	line-height: normal;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.stafflist{
+	width:90%;
+	height:50%;
+	margin-top:170px;
+	padding:10px;
+	padding-left:15px;
+	margin-left: 100px;
+	text-align: center;
+}
+.staffbg {
+	float: left; width : 190px;
+	height: 183px;
+	background-image: url('../images/bg_staff.jpg');
+	margin:20px;
+	text-align: center;
+	cursor: pointer;
+}
+.total{
+	display:inline;
+	float:left;
+	height:30px;
+	margin-left:5px;
+	border:1px;
+	margin-top:7px;
+	border-color:#000000
+}
+.fenye {
+	float:left;
+	margin-left:15px;
+	width:150px;
+}
+.fenye img{
+	width:150px;
+	cursor:pointer;
+}
+.fenye a:hover{
+text-decoration: none;
+cursor: pointer;
+}

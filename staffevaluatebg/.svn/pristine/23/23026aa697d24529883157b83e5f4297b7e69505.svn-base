@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../css/left.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+	<a href="unit_listP.action" target="right">单位信息维护</a>
+</div>
+<div>
+	<a href="ww.baidu.com" target="right">角色信息维护</a>
+</div>
+<div>
+	<a href="ww.baidu.com" target="right">岗位信息维护</a>
+</div>
+<div>
+	<a href="businesshallweihu.jsp" target="right" >营业厅维护</a>
+</div>
+<div>
+	<a href="businessHall_listP.action" target="right" >营业厅查询</a>
+</div>
+<div>
+	<a href="ww.baidu.com" target="right">服务人员查询</a>
+	</div>
+<div>
+	<a href="ww.baidu.com" target="right">公用信息维护</a>
+	</div>
+<div>
+	<a href="ww.baidu.com" target="right">评价指标分类管理</a>
+	</div>
+<div>
+	<a href="ww.baidu.com" target="right">评价指标分类细项管理</a>
+</div>
+</body>
+</html>

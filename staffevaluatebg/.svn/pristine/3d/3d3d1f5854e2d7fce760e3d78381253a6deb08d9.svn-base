@@ -1,0 +1,38 @@
+package com.app.dao.impl;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.app.dao.UnitDao;
+import com.app.dao.XtjsDao;
+import com.app.entity.Unit;
+import com.app.entity.Staff;
+import com.app.entity.Xtjs;
+/**
+ * 
+ * @author 邢昭武
+ *  
+ * 单位Dao实现类
+ *
+ */
+public class UnitDaoImpl extends HibernateDaoSupport implements UnitDao{
+
+	@Override
+	public List<Unit> findAllUnit() {
+		return (List<Unit>)getHibernateTemplate()
+				.find("from Unit");
+	}
+
+	@Override
+	public Integer save(Unit unit) {
+		return (Integer)getHibernateTemplate().save(unit);
+	}
+	
+	
+}

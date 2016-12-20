@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="/struts-tags" prefix="s"%>
+<%--                 <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" %> --%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>营业厅维护</title>
+		<link rel="stylesheet" href="../css/yytwh.css" />
+		<script type="text/javascript" src="../js/01.js" ></script>
+	</head>
+
+	<body>
+		<div class="backsize">
+			<div class="backimg">
+				<form id="from1" method="post" action="confirm.php">
+					<table>
+						<!-----------------------------------营业厅所属单位,营业厅名称----------------------------------------------->
+						<tr>
+							<td class="name"><span class="icno">*</span><span>营业厅所属单位：</span></td>
+							<td class="intd"><input type="text" id="company_blone" name="company_blone" class="inboxone" placeholder="XX市公司" required/><span id="addico"><img src="../images/u8.png"style="height: 26px;"></span></td>
+							<td class="name"><span class="icno">*</span><span>营业厅名称：</span></td>
+							<td class="intd"><input type="text" id="company_name" name="company_name" required size="20"class="inboxtwo"/></td>
+						</tr>
+						<!---------------------------------------营业厅级别选择----------------------------------------------------->
+						<tr >
+							<td class="name"><span class="icno">*</span><span>营业厅级别：</span></td>
+							<td class="intd">
+								<select id="company_level" name="company_level" size="1" required class="inboxselect"/>
+								<option value="A级（XXX）">A级（XXX）
+								<option value="B级（XXX）">B级（XXX）
+								<option value="C级（XXX）">C级（XXX）
+								<select/>
+							</td>
+							<!--------------------------------------营业厅地址------------------------------------------------------->
+							<td class="name"><span class="icno">*</span><span>营业厅地址：</span></td>
+							<td class="intd"><input type="text" id="company_address" name="company_address" size="20"required class="inboxtwo"/></td>
+						</tr>
+						<!------------------------------------------营业厅编码------------------------------------------------------->
+						<tr>
+							<td class="name"><span class="icno">*</span><span>营业厅编码：</span></td>
+							<td class="intd"><input type="text" id="company_coid" name="company_coid" required class="inboxtwo"/></td>
+						</tr>
+						<!-----------------------------------------保存和取消按钮---------------------------------------------------->
+						<div class="fun">
+							<div class="save"><input type="submit" value="" class="submit saveico" id="submit" title="点击保存" onclick="return confirmX();"/></div>
+							<div class="cancel" ><input type="reset" value="" class="submit cancelico" id="submit" title="点击取消"/></div>
+						</div>
+					</table>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

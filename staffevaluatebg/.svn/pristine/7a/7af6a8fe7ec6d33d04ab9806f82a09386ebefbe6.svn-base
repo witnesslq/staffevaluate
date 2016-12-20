@@ -1,0 +1,114 @@
+package com.app.dao.impl;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.springframework.orm.hibernate3.HibernateCallback;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.app.dao.BusinessHallDao;
+import com.app.entity.BusinessHall;
+import com.app.entity.Staff;
+/**
+ * 
+ * @author 邢昭武
+ *  
+ * 角色Dao实现类
+ *
+ */
+public class BusinessHallDaoImpl extends HibernateDaoSupport implements BusinessHallDao{
+
+	@Override
+	public List<BusinessHall> findAllBusinessHall() {
+		return (List<BusinessHall>)getHibernateTemplate()
+				.find("from BusinessHall");
+	}
+
+	@Override
+	public Integer save(BusinessHall businessHall) {
+		
+		return (Integer)getHibernateTemplate().save(businessHall);
+	}
+
+	@Override
+	public List findAllByPage(int pageNo, int pageSize,int unitid) {
+
+		if (pageNo < 1) {
+			return null;
+		}
+		int offset = (pageNo - 1) * pageSize;
+		List list = this.getHibernateTemplate().executeFind(new HibernateCallback() {
+			public Object doInHibernate(Session session) throws HibernateException, SQLException {
+				List result = session.createQuery("from BusinessHall where unit_id=" + 1).setFirstResult(offset).setMaxResults(pageSize).list();
+				return result;
+			}
+		});
+		
+		
+		return list;
+	}
+
+	@Override
+	public Integer getBusinessHallCount() {
+		List listStudent = this.getHibernateTemplate().find("from BusinessHall");
+		return listStudent.size();
+	}
+
+	@Override
+	public String getNewBusinessHallId() {
+		List listStudent = this.getHibernateTemplate().find("from BusinessHall");
+		String maxId;
+		if (listStudent != null && !listStudent.isEmpty()) {
+
+			maxId = ((Staff) listStudent.get(listStudent.size() - 1)).getStaff_no();
+			String temp = maxId.substring(1);
+			int i = Integer.parseInt(temp);
+			i++;
+			temp = String.valueOf(i);
+			int len = temp.length();
+			for (int j = 0; j < 7 - len; j++) {
+				temp = "0" + temp;
+			}
+			maxId = "Y" + temp;
+		} else {
+			maxId = "Y0000001";
+		}
+		return maxId;
+	}
+
+	@Override
+	public List findAllByPage(int pageNo, int pageSize, int unitid, String no, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer update(BusinessHall bh) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer deleteByIds(String ids) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BusinessHall selectById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Integer getBusinessHallCount(int unitid, String no, String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
+	
+}

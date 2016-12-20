@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    position: absolute;
+    background-image: url(../images/login.png);
+	background-size: cover;
+    width: 1360px;
+    height: 900px;
+    top: 10;
+}
+.main ul{
+	text-align: center;
+	margin-top: 300px;
+	height: 180px;
+
+}
+
+
+.main p{
+	height: 10px;
+	display: block;
+}
+.main input{
+	width: 300px;
+	line-height: 40px;
+	text-align: center;
+	background-color: white;
+}
+
+
+.main span{
+	display: inline;
+	width: 30%;
+	font-size: 25px;
+	font-family:'微软雅黑';
+	font-weight: bold;
+}
+
+.main .button{
+	
+    margin-left: 100px;
+    margin-top:10px;
+}
+.main .button input{
+	background-image: url(../images/u6_mouseDown.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	width: 360px;
+	height: 50px;
+}
+
+.main .button input{
+	text-align: center;
+	line-height: 25px;
+	font-size: 30px;
+	font-family:'微软雅黑';
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+}
+.main .button input:hover{
+	background-image: url(../images/u6_mouseOver.png);
+}

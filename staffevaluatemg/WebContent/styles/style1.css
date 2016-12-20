@@ -1,0 +1,34 @@
+*{
+	margin:0px;
+	padding:0px;
+	text-align: center;
+}
+
+a{
+	text-decoration:none;
+}
+
+.list_top,.list_button
+{
+	/*border:1px solid blue;*/
+	width:600px;
+	height:200px;
+    margin:20px 170px;
+    position: absolute;
+}
+
+.list_button
+{
+	margin-top:250px;
+}
+
+.person
+{
+	/*border:1px solid blue;*/
+	width:128px;
+	height:200px;
+	float:left;
+	margin-right:67px;
+}
+
+.person_number,.person_name{color:white;}

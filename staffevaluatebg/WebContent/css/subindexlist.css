@@ -1,0 +1,84 @@
+body{
+	height:450px;
+	margin: 0;
+	padding: 0;
+}
+.header{
+	height: 40px;
+	width: 180px;
+	background: url(../images/u137.png) no-repeat;
+	background-size:180px 40px;
+	text-align: center;
+}
+.header span{
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 40px;
+}
+.main{
+	height:450px;
+}
+.main form{
+	background-color: rgb(234,238,241) ;
+	height: 600px;
+	margin: 0;
+	border:1px solid gray;
+}
+
+.main table{
+	text-align: center;
+	border: 2px solid white;
+	border-collapse: collapse;
+	width: 1000px;
+	margin: 0 auto;
+}
+.main table caption{
+	text-align: left;
+	margin: 8px 0px;
+	height:60px;
+}
+.main table caption span{
+	font-weight: bold;
+	line-height:60px;
+}
+.first select {
+	width: 80px;
+	height: 25px;
+	font-weight:bold;
+}
+
+.main table tr{
+
+	height: 38px;
+}
+.main table td{
+
+	border: 2px solid white; 
+}
+.main table thead{
+	background-color: rgb(215,223,226);
+	font-weight: bold;
+}
+.main .first-column{
+	width: 60px;
+}
+.main .second-column{
+	width: 180px;
+}
+
+.second .container{
+	position:absolute;
+	width:48%;
+	float: right;
+	top:400px;
+	left:500px;
+}
+
+.container  img{
+	width: 93px;
+	height: 35px;
+	margin: 0 15px;
+}
+.second {
+	height:100px;
+}

@@ -1,0 +1,118 @@
+*
+{
+	margin:0px;
+    padding:0px;
+    font-size:12px;
+    font-family: "微软雅黑";
+    background-repeat: no-repeat;
+}
+.backsize{/*border:1px solid blue;*/ width:100%;height:170px;}/*背景图片*/
+.icno{color:red;}/*红色必填符号*/
+/*边框高度*/
+.backsize .backimg form table tr td
+{
+	height:40px;
+}
+/*表格整体位置*/
+.backsize .backimg form table
+{
+	margin-top:1%;
+	position:absolute;
+}
+.backimg/*背景图片*/
+{
+	/*border:1px solid blue;*/
+	background-image:url(../images/u0.png);
+	width:68.1%;
+	height:26.8%;
+	margin-top:10px;
+	margin-left:10px;
+	position: absolute;
+}
+/*输入框前面的名称的样式*/
+.name
+{
+	width: 150px;height: 24px;
+	text-align:right;
+}
+/*输入框的样式*/
+.intd
+{
+	width:33.3%;
+}
+/*营业厅所属公司输入框样式*/
+.inboxone
+{  width:77%;
+   height:62.5%;
+   border: none;
+   color: #999999;
+}
+/*其他输入框样式*/
+.inboxtwo
+{ width:84%;
+   height:62.5%;
+   border: none;
+}
+/*下拉列表样式*/
+.inboxselect
+{
+	font-size: 14px;
+	width:84%;
+   height:62.5%;
+   border: none;
+   border-style: none;
+}
+#addico
+{
+	margin-top: 0%;
+	margin-left: -0.2%;
+	position: absolute;
+}
+/*按钮所属div样式*/
+.save,.cancel
+{
+	width:8.9%;
+	height:115%;
+	overflow:hidden;
+}
+.save
+{
+	margin-left:73.5%;
+}
+.cancel
+{
+	margin-top: -3.1%;
+	margin-left: 83.8%;
+	position: absolute;
+}
+/*按钮本身div样式*/
+.fun
+{
+	width: 100%;
+	height: 15%;
+	margin-top: 14%;
+	position: absolute;
+}
+/*按钮大小*/
+.submit,.reset
+{
+	border-style: none;
+	width: 109%;
+	height: 34px;
+	text-align: end;
+	margin-top: -2%;
+	margin-left: -4%;
+}
+.saveico
+{
+	background-image:url(../images/保存.png);
+	background-size: cover;
+}
+.cancelico
+{
+	background-image:url(../images/退出.png);
+	background-size: cover;
+}
+/*鼠标点击按钮样式*/
+.submit:active{border:2px solid rgb(167,214,245);}
+.submit:hover{background-color:rgb(167,214,245);}

@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+.main {
+    position: absolute;
+    background-image: url(../images/u00.jpg);
+	background-size: cover;
+    width: 1024px;
+    height: 726px;
+    top: 0;
+    right: 150px;
+}
+.header {
+    height: 115px;
+    width:100%;
+    position: relative;
+}
+.content {
+	width:1024px;
+    margin-top: 0;
+    padding: 20px;
+	margin-right:0;
+	
+}
+.content-left {
+	border: 1px solid red;
+	width:200px;
+	float:left;
+	height:100%
+}
+
+
+.content-right {
+	border: 1px solid red;
+    width:auto;
+    float:left;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+	margin-left:20px;
+}
+
+
+
+
+.left-title {
+    margin-left: 10px;
+    font-weight: bold;
+	color:#ffffff
+}
+
+.accordion-toggle {
+   background-image: url(../images/u10.png);
+   height:61px;
+   margin-top:40px;
+   padding-top:23px;
+   padding-left:40px;
+   background-repeat:no-repeat;
+	
+}
+
+    .accordion-toggle:hover {
+        background-image: url(../images/u12.png);
+        text-decoration: none;
+        color: white !important;
+		
+    }
+
+.accordion-inner:hover {
+    background-image: url(../images/left-title-bg-h.png);
+    text-decoration: none;
+    color: white !important;
+    cursor: pointer;
+}
+
+
+.content {
+    margin;
+    border: 1px solid red;
+	
+}
+.foot{
+height: auto;
+    position: relative;
+}
+.caidanA:hover{
+text-decoration: none;
+}
+.caidanA:link{
+
+text-decoration: none;
+}
+.caidanA:visited{
+text-decoration: none;
+}
+.caidanA:active{
+text-decoration: none;
+}

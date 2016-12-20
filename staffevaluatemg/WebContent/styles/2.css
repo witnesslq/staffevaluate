@@ -1,0 +1,62 @@
+
+.staffw {
+	display:inline;
+	float:left;
+	margin-left:50px;
+	
+}
+.staffs  {
+	background-image: url(../images/u29.png);
+	background-repeat: no-repeat;
+	margin-top:10px;
+	width: 150px;
+	height:50px;
+	text-align: center;
+}
+.inner{
+	margin-top:3px;
+	margin-left:-12px;
+	font-size:12px;
+	font-family:'微软雅黑';
+	color: #ffffff;
+}
+.table1:hover{
+	color:#ff0000;
+	cursor: pointer;
+}
+.inner:hover{
+	color:#ff0000;
+	cursor: pointer;
+}
+.total{
+	display:inline;
+	float:left;
+	height:30px;
+	margin-left:5px;
+	text-align: center;
+	border:1px;
+	margin-top:-3px;
+	border-color:#000000
+}
+.fenye {
+	display:inline;
+	float:left;
+	height:30px;
+	margin-left:15px;
+	font-size:10px;
+	font-family:"微软雅黑";
+	text-align: center;
+	width:50px;
+	border:1px;
+	border-color:#000000
+	
+}
+
+.fenye a:hover{
+text-decoration: none;
+cursor: pointer;
+}
+.fenye img {
+	cursor:pointer;
+}
+

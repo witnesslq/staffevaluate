@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-16 12:16:39 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.app.entity.BusinessHall" table="BUSINESSHALL" lazy="true">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="no" type="java.lang.String">
+            <column name="NO" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="level" type="java.lang.String">
+            <column name="LEVEL" />
+        </property>
+        <set name="staff" cascade="delete" inverse="true">
+			<key column="businesshall_id"/>
+			<one-to-many class="com.app.entity.Staff"/>
+		</set>
+         <many-to-one name="unit" class="com.app.entity.Unit" fetch="select"  column="unit_id" not-found="exception"/>
+        <!-- 关联关系映射 -->
+	
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,299 @@
+*{
+	margin:0px;
+    padding:0px;
+    font-size:12px;
+    font-family: "微软雅黑";
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+/*整个大的div整体*/
+.background
+{
+	margin-top:10px;
+	margin-left:10px;
+}
+/*标题背景*/
+.title
+{
+	/*border: 1px solid blue;*/
+	width:140px;
+	height: 25px;
+	background-image: url(../images/u137.png);
+	background-repeat: no-repeat;
+}
+/*标题字体样式*/
+.title div
+{
+	margin-top: 0.3%;
+	margin-left: 2.5%;
+	font-size: 13px;
+	font-family:"微软雅黑"
+	font-weight: bold;
+	position: absolute;
+}
+/*内容背景图片*/
+.backsize
+{
+	/*border: 1px solid blue;*/
+	width:72%;
+	height:494px;
+	background-image:url(../images/u0.png) ;
+	border: 1px solid rgb(128,138,135);
+}
+.head1 {
+    margin-left: 17px;
+}
+/*下拉列表div样式*/
+.select
+{
+	/*border: 1px solid blue;*/
+	width:200px;
+	height: 46px;
+	float:left;
+	margin-top: 8px;
+}
+.staffno{
+	float:left;
+	width:200px;
+	height: 46px;
+	margin-top: 8px;
+}
+.staffname{
+	float:left;
+	width:200px;
+	height: 46px;
+	margin-top: 8px;
+}
+.icno{color:red;}/*红色必填符号**/
+/*下拉列表框样式*/
+.inboxselect
+{
+	font-size: 14px;
+	width: 253px;
+   height: 25px;
+   border: none;
+   text-align:left;
+   border-style: none;
+    margin-left: 64px;
+}
+/*下拉列表定位*/
+.left
+{ 
+   /* border: 1px solid blue;*/
+    width: 24%;
+    height: 4%;
+    margin-top: 0.6%;
+    margin-left: 2%;
+    position: absolute;
+}
+/*查询按钮div样式，背景图片*/
+.right {
+	/*border: 1px solid white;*/
+	width: 6%;
+	height: 4%;
+	max-width: 124px;
+	max-height: 32px;
+	margin-top: 0.6%;
+	margin-left: 51%;
+	position: absolute;
+}
+/*查询按钮所属div样式*/
+.find
+{
+	/*border: 1px solid blue;*/
+	width: 120%;
+	height: 130%;
+	float: left;
+	margin-left: 65px;
+    margin-top: 0px;
+}
+/*鼠标放在按钮上时边框显示样式*/
+.find:hover
+{border:2px solid rgb(167,214,245);}
+/*点击按钮时样式*/
+.find:active{border:2px solid white;}
+/*表格部分整体div*/
+.infomation
+{
+	/*border: 1px solid blue;*/
+	width:100%;
+	height: 78%;
+}
+/*表格div样式*/
+.information_list
+{
+	/*border: 1px solid blue;*/
+	width:97%;
+	height: 94%;
+	margin:0px auto;
+}
+/*表格基本样式*/
+table
+{
+	border: 1px solid blue;
+	width:68%;
+	height:359px;
+	margin-left: 10px;
+	margin-top:3%;
+	position: absolute;
+	background-color:white;
+	border-collapse:collapse;
+}
+/*表格行高样式*/
+
+/*表格列宽样式*/
+.cols1{width:56px;}
+.cols234{width:19%;}
+.cols5{width: 24%;}
+.cols_unitno{width:56%;}
+.cols_unitname{width:24%;}
+.cols_checkbox{width:19%;}
+
+/*表头样式*/
+table tr th
+{
+	border:1px solid white;
+	background-color: rgb(216,223,227);
+}
+/*表格边框*/
+table tr td{border:1px solid white;}
+/*表格间行颜色样式，奇数行变色*/
+table tr:nth-child(odd)
+{
+	background-color:rgb(234,238,240);
+}
+/*鼠标放在表行变色*/
+table tr:hover
+{
+    background-color:rgb(219,247,196); 
+}
+/*页数显示区样式*/
+.page_session
+{
+	/*border: 1px solid blue;*/
+	width: 776px;
+	height: 30px;
+	margin-top: 1%;
+	margin-left: 21px;
+	background-image: url(../images/u177.png);
+	background-size: cover;
+}
+/*总共页数显示样式*/
+.page_file
+{
+	/*border: 1px solid blue;*/
+	width: 26.5%;
+	height: 100%;
+	margin-top: 0.5%;
+	margin-left: 2%;
+	float: left;
+	text-align: left;
+	letter-spacing:6px;
+}
+/*页面跳转按钮样式*/
+.page_select
+{
+	/*border: 1px solid blue;*/
+	width: 25%;
+	height: 100%;
+	margin-top: 0.5%;
+	margin-left: 44%;
+	float: left;
+	text-align: left;
+}
+/*页面显示字体样式*/
+.page_number
+{
+	letter-spacing: 0px;
+	text-align: center;
+}
+/*当前页码样式*/
+.now_page
+{
+	letter-spacing:1px;
+}
+/*跳转页面div样式*/
+.goto_page
+{
+	/*border: 1px solid black;*/
+	width: 59%;
+	height: 88%;
+	margin-top: -10%;
+	margin-left: 45%;
+	float: left;
+	letter-spacing: 1px;
+}
+/*跳转页面输入框样式*/
+.goto_box
+{
+	width: 77%;
+	height: 100%;
+	float: left;
+}
+/*跳转图标背景div*/
+.ic
+{
+	width:20px;
+	height: 20px;
+	float: left;
+}
+/*鼠标放在跳转图标上时的背景颜色样式*/
+.page_select a .ic:hover
+{ 
+	background-color: rgb(216,223,227);
+}
+/*鼠标点击跳转图标上时的背景颜色样式*/
+.page_select a .ic:active
+{
+	background-color: rgb(152,170,175);
+}
+/*跳转图标样式*/
+.gotoico
+{
+	float: left;
+}
+/*四个功能按钮整体div区*/
+.footer
+{
+	/*border: 1px solid blue;*/
+    margin-top:2%;
+    width: 100%;
+    height: 7%;
+}
+/*四个按钮所在div*/
+.function_sesstion
+{
+   /* border: 1px solid blue;*/
+    width: 49%;
+    height: 96%;
+    margin-left: 295px;
+}
+/*四个按钮公用样式*/
+.public
+{
+    /*border: 1px solid blue;*/
+    width: 21.2%;
+    height: 85%;
+	float: left;
+	margin-left: 3%;
+	/*background-image:url(../images/01.png);*/
+}
+/*四个功能按钮div样式*/
+.ico
+{
+	width: 109%;
+	height: 128%;
+	margin-top: -3.5%;
+	margin-left: -4%;
+}
+/*鼠标放在按钮上时效果*/
+.public:hover{border:2px solid rgb(167,214,245);}
+/*鼠标点击按钮时效果*/
+.public:active{border:2px solid white;}
+.s1 {
+	position:absolute;
+	margin-left:0px;
+	margin-top:4px;
+	
+}
