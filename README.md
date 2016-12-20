@@ -1,0 +1,4 @@
+# staffevaluate
+关于电力公司的员工评价系统项目，前台的有俩个版本和一个后台维护版本
+其中staffevaluatemg和serviceevaluatemg是俩个不同版本的前台
+staffevaluatebg是后台
